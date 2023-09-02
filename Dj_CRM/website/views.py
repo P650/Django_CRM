@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
 from .forms import SignUpform
+from .models import Record
 
 #username: admin
 #password: pavan123
@@ -10,7 +11,10 @@ from .forms import SignUpform
 # Create your views here.
 def home(request):
     # check if they login
-    print(request.method)
+    # print(request.method)
+    records = Record.objects.all()
+    #it ll load all the records from the database
+
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
@@ -27,7 +31,7 @@ def home(request):
             return redirect('home')
 
     else:
-        return render(request, 'home.html', {})
+        return render(request, 'home.html', {'records':records})
 
 
 def logout_user(request):
@@ -53,3 +57,14 @@ def register_user(request):
         return render (request, 'register.html', {'form':form})
 
     return render(request, 'register.html', {'form':form})
+
+
+def record_details(request, pk):
+    if request.user.is_authenticated:
+        #looking for the record with the id of pk
+        cus_record = Record.objects.get(id=pk)
+        return render(request, 'record.html', {'cus_record':cus_record})
+
+    else:
+        messages.success(request, "Please login to view the record")
+        return redirect('home')
