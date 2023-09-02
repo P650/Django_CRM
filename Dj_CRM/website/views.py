@@ -68,3 +68,14 @@ def record_details(request, pk):
     else:
         messages.success(request, "Please login to view the record")
         return redirect('home')
+
+def delete_record(request, pk):
+    if request.user.is_authenticated:
+        cus_record = Record.objects.get(id=pk)
+        cus_record.delete()
+        messages.success(request, "You have successfully deleted the record")
+        return redirect('home')
+
+    else:
+        messages.success(request, "Please login to delete the record")
+        return redirect('home')
