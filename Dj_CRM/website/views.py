@@ -109,3 +109,5 @@ def update_record(request, pk):
     else:
         messages.success(request, "Please login to update the record")
         return redirect('home')
+
+        
