@@ -36,21 +36,19 @@ Reports and Analytics:
 
 Generate reports and analytics on customer interactions, sales, and user activities.
 Visualize data through charts and graphs for insights.
-Responsive Design:
 
-Mobile-friendly design for easy access from various devices.
-Intuitive and user-friendly interface for efficient navigation.
-Technologies Used:
+# Technologies Used:
 
 Django: A high-level Python web framework for rapid development.
 HTML, CSS, and JavaScript: Frontend technologies for building the user interface.
 PostgreSQL: A powerful open-source relational database for data storage.
 Django's authentication system: For secure user management and login/logout functionality.
-Target Audience:
+
+# Target Audience:
 
 The Django CRM Web Application is ideal for small to medium-sized businesses and organizations that want to streamline their customer management processes, improve communication, and maintain organized records of customer interactions.
 
-Project Benefits:
+# Project Benefits:
 
 Efficiently manage customer data and interactions.
 Enhance user productivity through task management and reminders.
