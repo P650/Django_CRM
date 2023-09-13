@@ -1,10 +1,10 @@
 # Django Customer Relationship Management (CRM) Web Application
 
-Project Description:
+# Project Description:
 
 The Django CRM Web Application is a comprehensive customer relationship management system designed to help businesses manage and streamline their interactions with customers, clients, and leads. This web application provides a user-friendly interface with essential features such as user authentication, user management, and CRUD (Create, Read, Update, Delete) operations for customer data.
 
-Key Features:
+# Key Features:
 
 User Authentication:
 
